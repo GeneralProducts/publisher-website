@@ -1,0 +1,30 @@
+---
+title: Portfolio
+heading: Our books
+layout: default
+---
+
+<div class="header__background">
+	<h1>
+		{{page.heading}}
+		<span class="subtitle">Incredible stories, published with love</span>
+	</h1>
+</div>
+<section class="container__portfolio">
+	{% assign unique_tags = '' | split: '' %}
+	{% assign serieses = site.data.processed_books | group_by: "series" | sort: "title"  %}
+	{% for series in serieses  %}
+		<ul class="series-grid">
+			{% for book in series.items %}
+				{% unless unique_tags contains book.title %}
+					<li class="cover-container">
+						<a href="{{site.base_url}}{{ book.title | datapage_url: '/books'}}">
+							<img src="{{book.image_path}}" class="cover" alt="{{ book.title }}">
+						</a>
+					</li>
+					{% assign unique_tags = unique_tags | push: book.title  %}
+				{% endunless %}
+			{% endfor %}
+		</ul>
+	{% endfor %}
+</section>

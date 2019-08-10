@@ -1,0 +1,43 @@
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"Book",
+  "@id": "http://silveroakpress.com/{{ include.isbn }}",
+  "name" : "{{ include.title }}",
+  "author": {
+    "@type":"Person",
+    "name":"{{ include.author }}"
+  },
+  "url" : "{{ include.url }}",
+  "workExample" : [{
+    "@type": "Book",
+    "@id": "http://silveroakpress.com/{{ include.isbn }}",
+    "isbn": "{{ include.isbn }}",
+    "datePublished": "{{ include.pub_date }}",
+    "bookFormat": "http://schema.org/Paperback",
+    "potentialAction":{
+    "@type":"ReadAction",
+    "target":
+      {
+        "@type":"EntryPoint",
+        "urlTemplate":"http://www.barnesandnoble.com/s/{{include.isbn}}",
+        "actionPlatform":[
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/IOSPlatform",
+          "http://schema.org/AndroidPlatform"
+        ]
+      },
+      "expectsAcceptanceOf":{
+        "@type":"Offer",
+        "Price":"{{include.usd_price}}",
+        "priceCurrency":"USD",
+        "eligibleRegion" : {
+          "@type":"Country",
+          "name":"US"
+        },
+        "availability": "http://schema.org/InStock"
+      }
+    }
+  }]
+}
+</script>
