@@ -1,5 +1,8 @@
 _site/
 .sass-cache/
+images/covers/
 .jekyll-metadata
 *.xml
 *.json
+*.code-workspace
+.byebug_history

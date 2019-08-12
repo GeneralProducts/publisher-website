@@ -12,13 +12,14 @@ layout: default
   gbp_price = page.gbp_price
   url = page.url
 %}
+
 <div class="header__background--book-page">
   <h1>• Coming soon •</h1>
 </div>
 <section class="container__book-page">
   <div class="sidebar">
-    <img class="cover--large" src="{{page.image_path}}" > 
-  </div>     
+    <img class="cover--large" src="/images/covers/{{page.isbn}}.jpg" />
+  </div>
   <div class="content">
     <h1 class="book-page">{{page.title}}</h1>
     <h2>{{page.author}}</h2>
@@ -27,9 +28,10 @@ layout: default
       <h3>Reviews</h3>
       <p>{{page.reviews}}</p>
     {% endif %}
-    <p> 
-      Published {{page.pub_date | date: "%b %d, %Y"}} • {{page.page_count}} pages • {{page.measurements}}mm • 
+    <p>
+      Published {{page.pub_date}} • {{page.page_count}} pages • {{page.measurements}}mm •
       ISBNs: {{page.isbn}} • {{ page.isbns | split: " " | join: " • " }}
+      RRPs ${{ page.usd_price }} • £{{ page.gbp_price }}
     </p>
     <h4>Buy {{page.title}}</h4>
     <ul class="bookstores-grid">

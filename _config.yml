@@ -8,3 +8,5 @@ page_gen:
     template: 'book_template'
     name: 'title'
     dir: 'books'
+
+include: [lib/initializer.rb]

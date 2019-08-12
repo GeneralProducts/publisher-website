@@ -1,6 +1,12 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-gem 'jekyll', '3.3.1'
+gem 'jekyll'
 gem 'lisbn'
-gem 'sanitize'
 gem 'nokogiri'
+gem 'sanitize'
+
+group :test do
+  gem 'rspec'
+end
