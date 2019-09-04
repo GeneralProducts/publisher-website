@@ -30,7 +30,7 @@ On the command line:
 
 ### From ONIX: 
 
-`ruby lib/seed.rb --onix boldwood`
+`ruby lib/seed.rb --onix [publisher-name]`
 
 ## Build and run
 
@@ -40,3 +40,6 @@ To run the site locally:
 
 `jekyll serve`
 
+View the site locally:
+
+`localhost:4000`
