@@ -19,7 +19,7 @@ layout: default
 				{% unless unique_tags contains book.title %}
 					<li class="cover-container">
 						<a href="{{site.base_url}}{{ book.title | datapage_url: '/books'}}">
-							<img src="{{site.base_url}}/images/covers/{{book.isbn}}.jpg" class="cover" alt="{{ book.title }}">
+							<img src="{{site.base_url}}/images/covers/{{book.isbn}}.jpg" class="cover" alt="">
 						</a>
 					</li>
 					{% assign unique_tags = unique_tags | push: book.title  %}
