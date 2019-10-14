@@ -62,14 +62,6 @@ module Adaptors
       text_record['external_text']
     end
 
-    def isbn10(product)
-      Lisbn.new(product['isbn']).isbn10
-    end
-
-    def isbn13(product)
-      Lisbn.new(product['isbn']).isbn13
-    end
-
     def price_amount(product, currency)
       price = product.prices.find do |x|
         x['currency_code'] == currency

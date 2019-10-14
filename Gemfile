@@ -6,3 +6,7 @@ gem 'jekyll'
 gem 'lisbn'
 gem 'nokogiri'
 gem 'sanitize'
+
+group :test do
+  gem 'rspec'
+end
