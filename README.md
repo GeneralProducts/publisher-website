@@ -48,3 +48,7 @@ To process a file called `snowbooks.xml`, run:
 To run the site locally:
 
 `jekyll serve`
+
+View the site locally:
+
+`localhost:4000`
