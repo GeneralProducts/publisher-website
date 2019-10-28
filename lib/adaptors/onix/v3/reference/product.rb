@@ -28,6 +28,19 @@ module Adaptors
             at_xpath('ProductIdentifier[ProductIDType=15]/IDValue').content
           end
 
+          def format
+            form = at_xpath('DescriptiveDetail/ProductForm').content
+
+            case form
+            when "BB"
+              "Hardback"
+            when "BC"
+              "Paperback"
+            else
+              form
+            end
+          end
+
           def authorship
             names = contributors.map(&:person_name)
 

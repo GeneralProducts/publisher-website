@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'initializer'
 require_relative 'adaptors/onix'
 require_relative 'adaptors/consonance'
 require_relative 'write_data'
@@ -47,13 +46,13 @@ end
 
 opt_parser.parse!
 
-if ARGV[0] == 'onix' && %w[scribd facet taylor-francis boldwood].include?(ARGV[1])
-  puts "ONIX is being processed for #{ARGV[1]}. Processed data will be put into _data/processed_books.json".green
+if ARGV[0] == 'onix' && %w[scribd facet taylor-francis boldwood lup].include?(ARGV[1])
+  puts "\e[32mONIX is being processed for #{ARGV[1]}. Processed data will be put into _data/processed_books.json\e[0m"
   source = Adaptors::Onix.new(publisher: ARGV[1])
   WriteData.new(source).call
 
 elsif ARGV[0] == 'consonance'
-  puts 'Consonance is being queried. Processed data will be put into _data/processed_books.json'.green
+  puts "\e[32mConsonance is being queried. Processed data will be put into _data/processed_books.json\e[0m"
   source = Adaptors::Consonance.new
   WriteData.new(source).call
 

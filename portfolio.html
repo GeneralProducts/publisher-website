@@ -4,27 +4,25 @@ heading: Our books
 layout: default
 ---
 
-<div class="header__background">
+<header>
 	<h1>
 		{{page.heading}}
-		<span class="subtitle">Incredible stories, published with love</span>
 	</h1>
-</div>
-<section class="container__portfolio">
-	{% assign unique_tags = '' | split: '' %}
-	{% assign serieses = site.data.processed_books | group_by: "series" | sort: "title"  %}
-	{% for series in serieses  %}
-		<ul class="series-grid">
-			{% for book in series.items %}
-				{% unless unique_tags contains book.title %}
-					<li class="cover-container">
-						<a href="{{site.base_url}}{{ book.title | datapage_url: '/books'}}">
-							<img src="{{site.base_url}}/images/covers/{{book.isbn}}.jpg" class="cover" alt="">
-						</a>
-					</li>
-					{% assign unique_tags = unique_tags | push: book.title  %}
-				{% endunless %}
-			{% endfor %}
-		</ul>
-	{% endfor %}
-</section>
+	<aside>Incredible stories, published with love</aside>
+</header>
+<container>
+	<ul class="covers-container">
+		{% for book in site.data.processed_books %}
+			<li class="cover-container">
+				<a href="{{site.base_url}}{{ book.title | datapage_url }}">
+					<img src="{{site.base_url}}/images/covers/{{book.isbn}}.jpg" class="cover" alt="">
+				</a>
+				<p>
+					<small>{{book.pub_date | date: '%b %Y'}}</small>
+					<br/>
+					<strong>{{book.title }}</strong>
+				</p>
+			</li>
+		{% endfor %}
+	</ul>
+</container>

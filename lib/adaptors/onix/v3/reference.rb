@@ -3,6 +3,7 @@
 require_relative 'reference/product'
 require_relative 'reference/header'
 require 'forwardable'
+require 'byebug'
 
 # This class only does one thing, but it does it very well
 # It reads a thing called "doc", which it expects to be a Nokogiri
@@ -31,9 +32,15 @@ module Adaptors
         # as Adaptors::Onix::V3::Reference::Product,
         # which is exactly where it is
         def products
+          titles = []
           doc.xpath('ONIXMessage/Product').map do |product_node|
-            Product.new(product_node)
-          end
+            product = Product.new(product_node)
+            # next unless product.format == "BC" || product.format == "BB"
+            next if titles.include? product.title
+
+            titles << product.title
+            product
+          end.flatten.compact
         end
 
         private

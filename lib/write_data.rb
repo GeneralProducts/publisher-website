@@ -25,7 +25,7 @@ class WriteData
     @_processed_data ||= source.products.map do |product|
       {
         'title' => product.title,
-        'isbn' => product.isbn,
+        'isbn'  => product.isbn,
         'amz_uk_url' => "http://www.amazon.co.uk/gp/product/#{isbn10(product)}",
         'amz_us_url' => "http://www.amazon.com/gp/product/#{isbn10(product)}",
         'amz_ca_url' => "http://www.amazon.ca/gp/product/#{isbn10(product)}",
@@ -36,15 +36,15 @@ class WriteData
         'amz_es_url' => "http://www.amazon.es/gp/product/#{isbn10(product)}",
         'amz_jp_url' => "http://www.amazon.co.jp/gp/product/#{isbn10(product)}",
         'amz_in_url' => "http://www.amazon.in/gp/product/#{isbn10(product)}",
-        'kobo_url' => "https://store.kobobooks.com/search?Query=#{isbn13(product)}",
+        'kobo_url'   => "https://store.kobobooks.com/search?Query=#{isbn13(product)}",
         'infini-beam_url' => "http://www.infibeam.com/search?q=#{isbn13(product)}",
         'google_play_url' => "https://play.google.com/store/search?q=#{isbn13(product)}",
-        'hive_url' => "http://www.hive.co.uk/Search/Keyword?keyword=#{isbn13(product)}&productType=0",
-        'booktopia_url' => "http://www.booktopia.com.au/search.ep?keywords=#{isbn13(product)}&productType=917504",
+        'hive_url'        => "http://www.hive.co.uk/Search/Keyword?keyword=#{isbn13(product)}&productType=0",
+        'booktopia_url'   => "http://www.booktopia.com.au/search.ep?keywords=#{isbn13(product)}&productType=917504",
         'barnes_and_noble_url' => "http://www.barnesandnoble.com/s/#{isbn13(product)}",
         'worldcat_url' => "http://www.worldcat.org/search?q=#{isbn13(product)}",
         'books_a_million_url' => "http://www.booksamillion.com/search?query=#{isbn13(product)}&where=All",
-        'book_finder_url' => "http://www.bookfinder.com/search/?author=&title=&lang=en&isbn=#{isbn13(product)}&new=1&used=1&ebooks=1&mode=basic&st=sr&ac=qr",
+        'book_finder_url'     => "http://www.bookfinder.com/search/?author=&title=&lang=en&isbn=#{isbn13(product)}&new=1&used=1&ebooks=1&mode=basic&st=sr&ac=qr",
         'wordery_url' => "https://wordery.com/search?term=#{isbn13(product)}",
         'waterstones_url' => "https://www.waterstones.com/index/search/?term=#{isbn13(product)}",
         'foyles_url' => "http://www.foyles.co.uk/all?term=#{isbn13(product)}",
@@ -59,10 +59,11 @@ class WriteData
         'reviews' => sanitise(product.reviews),
         # 'subject'               => product["main_subject_id"],
         # 'series'                => product["series_ids"],
-        'pub_date' => product.pub_date,
+        'pub_date'   => product.pub_date,
         'page_count' => product.page_count,
-        'usd_price' => product.usd_price,
-        'gbp_price' => product.gbp_price
+        'usd_price'  => product.usd_price,
+        'gbp_price'  => product.gbp_price,
+        'format'     => product.format,
         # 'measurements'          => product["measurements"]["product_dimensions_mm"],
         # 'isbns'                 => (product["all_related_products"].find_all {|x| x["relation_code"] == "06"}.map {|x| x["isbn"] unless x["isbn"] == "No ISBN" }.flatten.join('<br/>') rescue nil)
       }
@@ -89,7 +90,7 @@ class WriteData
       end
     end
   rescue StandardError => e
-    puts "Error in cover processing: #{e}.".red
+    puts "Error in cover processing: #{e}."
   end
 
   def sanitise(str)

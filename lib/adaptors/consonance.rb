@@ -24,7 +24,7 @@ module Adaptors
     def parsed_raw_data
       JSON.parse(File.open('_data/raw_data.json', 'r').read)
     rescue StandardError => e
-      puts "Error: #{e}.".red
+      puts "\e[31mError: #{e}.\e[0m"
     end
 
     def processed_data

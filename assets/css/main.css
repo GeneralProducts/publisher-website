@@ -1,0 +1,408 @@
+/* Structure */
+body {
+	margin: 0;
+	font-family: "Amiri", sans-serif;
+	font-size: 28px;
+	color: #232323;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+@media (min-width: 1110px) {
+	container {
+		width: 100%;
+	}
+}
+
+/* Content */
+header {
+  padding: 50px;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	letter-spacing: 5px;
+	text-shadow: 1px 1px 1px #fefbe0;
+	font-size: 0.9em;
+	margin: 0 auto;
+  background-image: url(/images/flower2.jpeg);
+	background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50%;
+}
+
+header.primary {
+	background-image: url(/images/flower.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+header.secondary {
+	background-image: url(/images/flower3.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+section {
+	margin: 0 auto;
+	max-width: 1250px;
+	padding: 0 20px;
+}
+
+@media (min-width: 1110px) {
+	section {
+		width: 800px;
+	}
+}
+
+figure {
+	margin: 50px 0;
+	flex: 1;
+}
+
+aside {
+  display: block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: white;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 10px;
+	padding-top: 8px;
+	opacity: 0.95;
+}
+
+/* Typography */
+h1 {
+	background-color: white;
+	opacity: 0.95;
+}
+
+@media (min-width: 1110px) {
+	h1 {
+		font-size: 1.7em;
+    letter-spacing: 10px;
+    width: 50%;
+    margin: 0 auto;
+	}
+}
+
+h2 {
+	font-size: 1em;
+	margin-block-end: -10px;
+	margin-block-start: 50px;
+	line-height: 1;
+}
+
+h3 {
+	font-size: 0.6em;
+	margin: 60px 0 -30px 0;
+	font-family: "Noto sans";
+}
+
+p {
+	color: #232323;
+	font-family: "Amiri", sans-serif;
+	font-size: 0.75em;
+	line-height: 34px;
+}
+
+/* Links */
+a {
+	color: #232323;
+	text-decoration: none;
+}
+
+a:hover {
+	border-bottom: 4px solid #232323;
+}
+
+.bookstore {
+	flex: 1 auto;
+	text-align: center;
+	margin: 20px 10px 10px 0;
+	line-height: 60px;
+	border-bottom: 3px solid #e4e4e0;
+}
+
+/* Lists */
+ul {
+  padding-inline-start: 0 !important;
+	border-radius: 0px;
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: row;
+}
+
+li {
+	list-style-type: none;
+	font-size: 16px;
+	margin: 0 0 -20px;
+}
+
+/* Navigation */
+.nav {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (min-width: 1110px) {
+	.nav {
+		max-width: 1100px;
+	}
+}
+
+.nav-item-container {
+	display: inline-block;
+	font-weight: 800;
+	text-align: center;
+	margin-top: 10px;
+}
+
+@media (min-width: 1110px) {
+	.nav-item-container {
+    margin: 10px;
+	}
+}
+
+.nav-item {
+	display: inline;
+	font-size: 0.6em;
+	padding-right: 10px;
+}
+
+@media (min-width: 1110px) {
+	.nav-item {
+		display: inline-block;
+		padding: 0 30px;
+		font-size: 22px;
+	}
+}
+
+/* Images */
+.covers-container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: 0 auto;
+	justify-content: flex-start;
+}
+
+
+li.cover-container {
+	list-style-type: none;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+ justify-content: space-between;
+}
+
+li.cover-container	p {
+	margin: 0;
+	font-family: "Noto Sans", sans-serif !important;
+	font-size: 16px;
+	line-height: 1.3;
+}
+
+@media (min-width: 1110px) {
+	li.cover-container {
+		padding: 10px;
+		background-color: #eff1f7;
+    margin: 5px;
+    min-width: 200px;
+	}
+}
+
+li.cover-container a:hover {
+	border-bottom: none;
+	filter: brightness(1.2);
+}
+
+.cover {
+	width: 220px;
+	box-shadow: 2px 2px 8px #aaaeb9;
+}
+
+.cover--home {
+	float: right;
+	width: 100%;
+	margin: 20px 0;
+}
+
+@media (min-width: 1110px) {
+	.cover--home {
+		width: 240px;
+		border: 5px solid #000162;
+	}
+}
+
+.cover--home:hover {
+	filter: brightness(1.2);
+}
+
+.cover--large {
+	width: 100%;
+}
+
+.cover--large:hover {
+	filter: brightness(1.3);
+}
+
+/* Footer */
+footer {
+	position: relative;
+  top: 150px;
+	border-top: 5px solid #E7EBF4;
+	background-color: #232323;
+	display: flex;
+}
+
+footer .wrapper {
+	max-width: 800px;
+	display: flex;
+	margin: 0 auto;
+}
+
+footer ul {
+	display: flex;
+	padding: 0 70px;
+	flex-direction: column;
+}
+
+footer li {
+	flex: 1;
+	list-style: none;
+	font-family: "Noto Sans", sans-serif;
+	line-height: 40px;
+}
+
+footer li img {
+	background-color: white;
+	width: 30px;
+}
+
+@media (min-width: 1110px) {
+	footer li {
+		font-size: 0.5em;
+    color: white;
+	}
+}
+
+footer li a {
+	text-decoration: none;
+	color: white;
+}
+
+footer li a:hover {
+	border-bottom: none;
+	color: #03a4a6;
+}
+
+/* Portfolio page */
+container.portfolio-page {
+	display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+@media (min-width: 1110px) {
+	container.portfolio-page {
+		flex-direction: row;
+		max-width: 1000px !important;
+	}
+}
+
+container.portfolio-page section {
+	flex: 2;
+}
+
+@media (min-width: 1110px) {
+	container.portfolio-page section {
+		margin-left: 30px;
+	}
+}
+
+container.portfolio-page h1 {
+	background: none;
+	text-align: left;
+	letter-spacing: normal;
+	margin: 40px 0;
+	line-height: 1.1;
+	width: 100%;
+}
+
+container.portfolio-page h2 {
+	background: none;
+	text-align: left;
+	letter-spacing: normal;
+	margin: 40px 0;
+	line-height: 1.1;
+}
+
+@media (min-width: 1110px) {
+	container.portfolio-page h1 {
+		font-size: 45px;
+	}
+}
+
+header.portfolio-page {
+	background-color: #e3dde6;
+	background-image: url("/images/shadow.jpg");
+	background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50%;
+	padding: 30px;
+}
+
+header.portfolio-page h1 {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	background-color: white;
+	text-shadow: 1px 1px 1px #fefbe0;
+	font-size: 0.9em;
+	width: 70%;
+	margin: 0 auto;
+}
+
+@media (min-width: 1110px) {
+	header.portfolio-page h1 {
+		font-size: 1em;
+		letter-spacing: 10px;
+	}
+}
+
+.metadata span {
+	display: flex;
+	font-family: "Noto sans";
+	font-size: 14px;
+	font-weight: 400;
+	color: #839292
+}
+
+ul.metadata {
+	display: flex;
+	justify-content: flex-start;
+	border-top: 2px solid #f1f1eb;
+	padding-top: 10px;
+}
+
+.metadata li {
+	font-family: "Noto sans";
+	font-size: 16px;
+	font-weight: 400;
+		padding-right: 20px;
+}
+
+ul.shops {
+	font-family: "Noto sans";
+}
+
+hr {
+	border: 2px solid #f1f1eb;
+}
