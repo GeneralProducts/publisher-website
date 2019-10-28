@@ -1,6 +1,6 @@
 _site/
 .sass-cache/
-images/covers/
+# images/covers/
 .jekyll-metadata
 *.xml
 # *.json
