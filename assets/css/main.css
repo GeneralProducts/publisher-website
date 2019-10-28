@@ -88,6 +88,13 @@ h1 {
 	}
 }
 
+h1.secondary {
+	font-family: "Noto sans";
+	font-size: 20px !important;
+	color: #2e2e2e;
+	padding: 8px;
+}
+
 h2 {
 	font-size: 1em;
 	margin-block-end: -10px;
@@ -138,7 +145,7 @@ ul {
 li {
 	list-style-type: none;
 	font-size: 16px;
-	margin: 0 0 -20px;
+	margin: 0;
 }
 
 /* Navigation */
@@ -193,16 +200,15 @@ li {
 	justify-content: flex-start;
 }
 
-
-li.cover-container {
+.covers-container a {
 	list-style-type: none;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
- justify-content: space-between;
+  justify-content: space-between;
 }
 
-li.cover-container	p {
+.covers-container	p {
 	margin: 0;
 	font-family: "Noto Sans", sans-serif !important;
 	font-size: 16px;
@@ -210,15 +216,16 @@ li.cover-container	p {
 }
 
 @media (min-width: 1110px) {
-	li.cover-container {
+	.covers-container a {
 		padding: 10px;
 		background-color: #eff1f7;
     margin: 5px;
-    min-width: 200px;
+		min-width: 200px;
+		min-height: 300px;
 	}
 }
 
-li.cover-container a:hover {
+.covers-container a:hover {
 	border-bottom: none;
 	filter: brightness(1.2);
 }
@@ -247,6 +254,7 @@ li.cover-container a:hover {
 
 .cover--large {
 	width: 100%;
+	box-shadow: 2px 2px 8px #aaaeb9;
 }
 
 .cover--large:hover {
@@ -377,12 +385,16 @@ header.portfolio-page h1 {
 	}
 }
 
-.metadata span {
+.metadata, .metadata span {
 	display: flex;
 	font-family: "Noto sans";
 	font-size: 14px;
 	font-weight: 400;
 	color: #839292
+}
+
+p.metadata {
+	margin: 40px 0 -30px;
 }
 
 ul.metadata {
@@ -403,6 +415,16 @@ ul.shops {
 	font-family: "Noto sans";
 }
 
+ul.shops li {
+	margin: 0 0 -20px;
+}
+
 hr {
 	border: 2px solid #f1f1eb;
+}
+
+.massive {
+	font-size: 120px;
+	position: relative;
+	top: 30px;
 }

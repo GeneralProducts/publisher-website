@@ -10,10 +10,10 @@ module Adaptors
       # This class only does one thing, but it does it very well
       # It accepts a thing called "product_node", which it expects to be a Nokogiri
       # XML node, and it reads data from it.
-      # If it gets asked for anything much more complex, like stuff
+      # If it gets asked for anything much more complex, like information
       # about the products in the XML, it will punt that to a different class.
       class Reference
-        class Product
+        class Product # rubocop:disable Metrics/ClassLength
           extend Forwardable
 
           def initialize(product_node)
@@ -30,14 +30,15 @@ module Adaptors
 
           def format
             form = at_xpath('DescriptiveDetail/ProductForm').content
-
             case form
-            when "BB"
-              "Hardback"
-            when "BC"
-              "Paperback"
+            when 'BB'
+              'Hardback'
+            when 'BC'
+              'Paperback'
+            when 'EA'
+              'Digital'
             else
-              form
+              'Unknown'
             end
           end
 
@@ -56,12 +57,6 @@ module Adaptors
             end
           end
 
-          def contributors
-            xpath('DescriptiveDetail/Contributor').map do |contributor|
-              Contributor.new(contributor)
-            end.sort_by(&:sequence_number)
-          end
-
           def title
             [
               title_element.at_xpath('TitlePrefix')&.content,
@@ -73,9 +68,22 @@ module Adaptors
             title_element.at_xpath('Subtitle')&.content
           end
 
-          # TODO: or ResourceForm 01?
+          def series
+            at_xpath('DescriptiveDetail/Collection[CollectionType=10]/TitleDetail/TitleElement/TitleWithoutPrefix')&.content
+          end
+
+          def series_number
+            at_xpath('DescriptiveDetail/Collection[CollectionType=10]/CollectionSequence/CollectionSequenceNumber')&.content
+          end
+
+          def subject
+            xpath('DescriptiveDetail/Subject').map do |subject|
+              subject.at_xpath('SubjectHeadingText')
+            end.compact.flatten.join(', ')
+          end
+
           def front_cover_url
-            collateral_detail.at_xpath('SupportingResource[ResourceContentType=01]/ResourceVersion[ResourceForm=02]/ResourceLink')&.content
+            collateral_detail.at_xpath('SupportingResource[ResourceContentType=01]/ResourceVersion/ResourceLink')&.content
           end
 
           def gbp_price
@@ -87,18 +95,25 @@ module Adaptors
           end
 
           def page_count
-            at_xpath('DescriptiveDetail/Extent[ExtentType=01]/ExtentValue')&.content
+            at_xpath('DescriptiveDetail/Extent[ExtentType=01]/ExtentValue')&.content ||
+              at_xpath('DescriptiveDetail/Extent[ExtentType=00]/ExtentValue')&.content
           end
 
           def pub_date
             date_string = publishing_detail.at_xpath('PublishingDate/Date')&.content
 
             return unless date_string
-            Date.parse(date_string).strftime("%b %d, %Y")
+
+            Date.parse(date_string).strftime('%b %d, %Y')
+          end
+
+          def pub_date_iso
+            publishing_detail.at_xpath('PublishingDate/Date')&.content
           end
 
           def blurb
-            collateral_detail.at_xpath('TextContent[TextType=02]/Text')&.content
+            collateral_detail.at_xpath('TextContent[TextType=02]/Text')&.content ||
+              collateral_detail.at_xpath('TextContent[TextType=03]/Text')&.content
           end
 
           def reviews
@@ -107,8 +122,14 @@ module Adaptors
 
           private
 
+          def contributors
+            xpath('DescriptiveDetail/Contributor').map do |contributor|
+              Contributor.new(contributor)
+            end.sort_by(&:sequence_number)
+          end
+
           def price(currency_code: nil)
-            at_xpath("ProductSupply/SupplyDetail/Price[CurrencyCode=#{currency_code}]/PriceAmount")&.content&.to_f
+            at_xpath("ProductSupply/SupplyDetail/Price[CurrencyCode='#{currency_code}']/PriceAmount")&.content
           end
 
           def title_element

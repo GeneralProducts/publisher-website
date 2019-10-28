@@ -14,7 +14,12 @@ layout: default
 %}
 
 <header class="portfolio-page">
-  <h1>• Coming soon •</h1>
+  {% assign todays_date = "now" | date: "%Y%m%d" %}
+  {% if page.pub_date_iso > todays_date %}
+    <h1 class="secondary">• Coming soon •</h1>
+  {% else %}
+    <h1 class="secondary">• Recently published •</h1>
+  {% endif %}
 </header>
 
 <container class="portfolio-page">
@@ -22,12 +27,17 @@ layout: default
     <img class="cover--large" src="/images/covers/{{page.isbn}}.jpg" />
   </figure>
   <section>
+    <p class="metadata">
+      {{page.series}}
+      {{page.series_number}}
+    </aside>
     <h1>{{page.title}}</h1>
+    <p>{{page.subtitle}}</p>
     <h2>{{page.author}}</h2>
     <p>{{page.blurb}}</p>
     {% if page.reviews.size > 0 %}
-    <hr/>
-    <p>{{page.reviews}}</p>
+      <hr/>
+      <p><span class="massive">“</span>{{page.reviews}}</p>
     {% endif %}
 
     <ul class="metadata">
@@ -41,7 +51,7 @@ layout: default
           {{page.pub_date | date: "%d %b %Y"}}
         </li>
       {% endif %}
-      {% if page.gbp_price.size > 0 and page.usd_price.size > 0 %}
+      {% if page.gbp_price%}
         <li>
           <span>Price</span>
           ${{ page.usd_price }} / £{{ page.gbp_price }}
@@ -56,14 +66,12 @@ layout: default
       {% if page.format.size > 0 %}
       <li>
         <span>Format</span>
-        {{ product.format }}
+        {{ page.format }}
       </li>
       {% endif %}
     </ul>
+    <p class="metadata">{{page.subject}}</p>
 
-    <!-- <p>
-      ISBNs: {{page.isbn}} • {{ page.isbns | split: " " | join: " • " }}
-    </p> -->
     <h3>Buy {{page.title}}</h3>
     <ul class="shops">
       <li><a class="bookstore" target="_blank" href="{{ page.wordery_url          }}">Wordery        </a></li>

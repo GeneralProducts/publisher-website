@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative 'reference/product'
-require_relative 'reference/header'
 require 'forwardable'
 require 'byebug'
 
@@ -35,7 +34,8 @@ module Adaptors
           titles = []
           doc.xpath('ONIXMessage/Product').map do |product_node|
             product = Product.new(product_node)
-            # next unless product.format == "BC" || product.format == "BB"
+            # If you want to restrict the products by format, try something like the next line:
+            # next unless ["Paperback","Hardback","Digital"].include? product.format
             next if titles.include? product.title
 
             titles << product.title
@@ -44,12 +44,6 @@ module Adaptors
         end
 
         private
-
-        def_delegators :header, :sent_datetime
-
-        def header
-          Header.new(doc.at_xpath('ONIXMessage/Header'))
-        end
 
         # We have created an instance variable called @doc
         # This lets us write "doc" instead of "@doc" everywhere.

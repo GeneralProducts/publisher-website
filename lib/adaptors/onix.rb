@@ -12,7 +12,7 @@ ADAPTOR = {
 }.freeze
 
 module Adaptors
-  # An adaptor that gets the publisher's ONIX and process it with Nokogiri
+  # An adaptor that gets the publisher's ONIX and processes it with Nokogiri
   class Onix
     extend Forwardable
     def initialize(publisher: nil)

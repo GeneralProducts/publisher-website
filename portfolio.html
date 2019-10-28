@@ -8,21 +8,20 @@ layout: default
 	<h1>
 		{{page.heading}}
 	</h1>
-	<aside>Incredible stories, published with love</aside>
 </header>
 <container>
 	<ul class="covers-container">
 		{% for book in site.data.processed_books %}
-			<li class="cover-container">
-				<a href="{{site.base_url}}{{ book.title | datapage_url }}">
+			<a href="{{site.base_url}}{{ book.title | datapage_url }}">
+				<li class="cover-container">
 					<img src="{{site.base_url}}/images/covers/{{book.isbn}}.jpg" class="cover" alt="">
-				</a>
+				</li>
 				<p>
 					<small>{{book.pub_date | date: '%b %Y'}}</small>
 					<br/>
 					<strong>{{book.title }}</strong>
 				</p>
-			</li>
+			</a>
 		{% endfor %}
 	</ul>
 </container>
