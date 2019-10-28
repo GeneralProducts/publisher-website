@@ -404,6 +404,7 @@ header.portfolio-page h1 {
 
 p.metadata {
 	margin: 40px 0 -30px;
+	word-break: break-all;
 }
 
 ul.metadata {

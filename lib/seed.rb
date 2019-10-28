@@ -46,7 +46,7 @@ end
 
 opt_parser.parse!
 
-if ARGV[0] == "onix" && %w[scribd facet taylor-francis boldwood lup].include?(ARGV[1])
+if ARGV[0] == "onix"
   puts "\e[32mONIX is being processed for #{ARGV[1]}. Processed data will be put into _data/processed_books.json\e[0m"
   source = Adaptors::Onix.new(publisher: ARGV[1])
   WriteData.new(source).call
