@@ -3,6 +3,6 @@ _site/
 images/covers/
 .jekyll-metadata
 *.xml
-*.json
+# *.json
 *.code-workspace
 .byebug_history
