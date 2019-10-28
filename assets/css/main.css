@@ -277,18 +277,20 @@ footer {
 	border-top: 5px solid #E7EBF4;
 	background-color: #232323;
 	display: flex;
-	flex-direction: column;
 }
 
 footer .wrapper {
 	display: flex;
+	margin: 0 auto;
+	max-width: 800px;
+	flex-direction: column;
 }
 
 footer ul {
 	display: flex;
-	padding: 0 70px;
 	flex-direction: column;
 }
+
 
 footer li {
 	flex: 1;
@@ -309,6 +311,20 @@ footer li {
 
 @media (min-width: 1110px) {
 	footer {
+		flex-direction: row;
+	}
+
+	footer ul {
+		display: flex;
+		flex-direction: column;
+		padding: 0 70px 0;
+	}
+
+	footer ul:first-child {
+		padding-left: 0;
+	}
+
+	footer .wrapper {
 		flex-direction: row;
 	}
 }
