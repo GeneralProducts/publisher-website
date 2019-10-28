@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "../lib/adaptors/onix"
-require_relative "../lib/adaptors/onix/v3"
 require_relative "../lib/adaptors/onix/v3/reference"
 require "nokogiri"
 require "byebug"

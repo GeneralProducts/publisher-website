@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'reference/product'
-require 'forwardable'
-require 'byebug'
+require_relative "reference/product"
+require "forwardable"
+require "byebug"
 
 # This class only does one thing, but it does it very well
 # It reads a thing called "doc", which it expects to be a Nokogiri
@@ -32,7 +32,7 @@ module Adaptors
         # which is exactly where it is
         def products
           titles = []
-          doc.xpath('ONIXMessage/Product').map do |product_node|
+          doc.xpath("ONIXMessage/Product").map do |product_node|
             product = Product.new(product_node)
             # If you want to restrict the products by format, try something like the next line:
             # next unless ["Paperback","Hardback","Digital"].include? product.format

@@ -21,7 +21,7 @@ module Jekyll
       @site = site
       @base = base
       filename = sanitize_filename(data["title"]).to_s
-      @dir = "books/" + filename + '/'
+      @dir = "books/" + filename + "/"
 
       process('index.html')
       read_yaml(File.join(base, '_layouts'), 'book_template.html')

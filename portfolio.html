@@ -12,16 +12,16 @@ layout: default
 <container>
 	<ul class="covers-container">
 		{% for book in site.data.processed_books %}
-			<a href="{{site.base_url}}{{ book.title | datapage_url }}">
-				<li class="cover-container">
-					<img src="{{site.base_url}}/images/covers/{{book.isbn}}.jpg" class="cover" alt="">
-				</li>
-				<p>
-					<small>{{book.pub_date | date: '%b %Y'}}</small>
-					<br/>
-					<strong>{{book.title }}</strong>
-				</p>
-			</a>
+			<li class="cover-container">
+				<a href="{{site.base_url}}{{ book.title | datapage_url }}">
+					<img src="{{site.base_url}}/images/covers/{{book.isbn}}.jpg" class="cover" alt="Cover of ISBN {{book.isbn}} {{book.title}}"/>
+					<p>
+						<small>{{book.pub_date | date: '%b %Y'}}</small>
+						<br/>
+						<strong>{{book.title }}</strong>
+					</p>
+				</a>
+			</li>
 		{% endfor %}
 	</ul>
 </container>

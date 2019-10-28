@@ -24,3 +24,7 @@ Metrics/BlockLength:
   Enabled: false
 Security/Open:
   Enabled: false
+
+# Double quotes for "strings"
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'forwardable'
-require 'byebug'
-require_relative 'product/contributor'
+require "forwardable"
+require "byebug"
+require_relative "product/contributor"
 
 module Adaptors
   class Onix
@@ -25,20 +25,20 @@ module Adaptors
           end
 
           def isbn
-            at_xpath('ProductIdentifier[ProductIDType=15]/IDValue').content
+            at_xpath("ProductIdentifier[ProductIDType=15]/IDValue").content
           end
 
           def format
-            form = at_xpath('DescriptiveDetail/ProductForm').content
+            form = at_xpath("DescriptiveDetail/ProductForm").content
             case form
-            when 'BB'
-              'Hardback'
-            when 'BC'
-              'Paperback'
-            when 'EA'
-              'Digital'
+            when "BB"
+              "Hardback"
+            when "BC"
+              "Paperback"
+            when "EA"
+              "Digital"
             else
-              'Unknown'
+              "Unknown"
             end
           end
 
@@ -47,7 +47,7 @@ module Adaptors
 
             case names.length
             when 0
-              ''
+              ""
             when 1
               names[0]
             when 2
@@ -59,71 +59,71 @@ module Adaptors
 
           def title
             [
-              title_element.at_xpath('TitlePrefix')&.content,
-              title_element.at_xpath('TitleWithoutPrefix')&.content
-            ].compact.join(' ')
+              title_element.at_xpath("TitlePrefix")&.content,
+              title_element.at_xpath("TitleWithoutPrefix")&.content
+            ].compact.join(" ")
           end
 
           def subtitle
-            title_element.at_xpath('Subtitle')&.content
+            title_element.at_xpath("Subtitle")&.content
           end
 
           def series
-            at_xpath('DescriptiveDetail/Collection[CollectionType=10]/TitleDetail/TitleElement/TitleWithoutPrefix')&.content
+            at_xpath("DescriptiveDetail/Collection[CollectionType=10]/TitleDetail/TitleElement/TitleWithoutPrefix")&.content
           end
 
           def series_number
-            at_xpath('DescriptiveDetail/Collection[CollectionType=10]/CollectionSequence/CollectionSequenceNumber')&.content
+            at_xpath("DescriptiveDetail/Collection[CollectionType=10]/CollectionSequence/CollectionSequenceNumber")&.content
           end
 
           def subject
-            xpath('DescriptiveDetail/Subject').map do |subject|
-              subject.at_xpath('SubjectHeadingText')
-            end.compact.flatten.join(', ')
+            xpath("DescriptiveDetail/Subject").map do |subject|
+              subject.at_xpath("SubjectHeadingText")
+            end.compact.flatten.join(", ")
           end
 
           def front_cover_url
-            collateral_detail.at_xpath('SupportingResource[ResourceContentType=01]/ResourceVersion/ResourceLink')&.content
+            collateral_detail.at_xpath("SupportingResource[ResourceContentType=01]/ResourceVersion/ResourceLink")&.content
           end
 
           def gbp_price
-            price(currency_code: 'GBP')
+            price(currency_code: "GBP")
           end
 
           def usd_price
-            price(currency_code: 'USD')
+            price(currency_code: "USD")
           end
 
           def page_count
-            at_xpath('DescriptiveDetail/Extent[ExtentType=01]/ExtentValue')&.content ||
-              at_xpath('DescriptiveDetail/Extent[ExtentType=00]/ExtentValue')&.content
+            at_xpath("DescriptiveDetail/Extent[ExtentType=01]/ExtentValue")&.content ||
+              at_xpath("DescriptiveDetail/Extent[ExtentType=00]/ExtentValue")&.content
           end
 
           def pub_date
-            date_string = publishing_detail.at_xpath('PublishingDate/Date')&.content
+            date_string = publishing_detail.at_xpath("PublishingDate/Date")&.content
 
             return unless date_string
 
-            Date.parse(date_string).strftime('%b %d, %Y')
+            Date.parse(date_string).strftime("%b %d, %Y")
           end
 
           def pub_date_iso
-            publishing_detail.at_xpath('PublishingDate/Date')&.content
+            publishing_detail.at_xpath("PublishingDate/Date")&.content
           end
 
           def blurb
-            collateral_detail.at_xpath('TextContent[TextType=02]/Text')&.content ||
-              collateral_detail.at_xpath('TextContent[TextType=03]/Text')&.content
+            collateral_detail.at_xpath("TextContent[TextType=02]/Text")&.content ||
+              collateral_detail.at_xpath("TextContent[TextType=03]/Text")&.content
           end
 
           def reviews
-            collateral_detail.at_xpath('TextContent[TextType=06]/Text')&.content
+            collateral_detail.at_xpath("TextContent[TextType=06]/Text")&.content
           end
 
           private
 
           def contributors
-            xpath('DescriptiveDetail/Contributor').map do |contributor|
+            xpath("DescriptiveDetail/Contributor").map do |contributor|
               Contributor.new(contributor)
             end.sort_by(&:sequence_number)
           end
@@ -133,15 +133,15 @@ module Adaptors
           end
 
           def title_element
-            @_title_element ||= at_xpath('DescriptiveDetail/TitleDetail[TitleType=01]/TitleElement[TitleElementLevel=01]')
+            @_title_element ||= at_xpath("DescriptiveDetail/TitleDetail[TitleType=01]/TitleElement[TitleElementLevel=01]")
           end
 
           def collateral_detail
-            xpath('CollateralDetail')
+            xpath("CollateralDetail")
           end
 
           def publishing_detail
-            xpath('PublishingDetail')
+            xpath("PublishingDetail")
           end
 
           # How boring to keep typing product_node.at_xpath and product_node.xpath.

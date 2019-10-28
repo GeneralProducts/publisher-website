@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'forwardable'
-require 'byebug'
+require "forwardable"
+require "byebug"
 # This class only does one thing, but it does it very well
 # It accepts a thing called "node", which it expects to be a Nokogiri
 # XML node, and it reads data from it.
@@ -27,11 +27,11 @@ module Adaptors
             end
 
             def sequence_number
-              at_xpath('SequenceNumber')&.content&.to_i
+              at_xpath("SequenceNumber")&.content&.to_i
             end
 
             def person_name
-              at_xpath('PersonName')&.content
+              at_xpath("PersonName")&.content
             end
 
             private

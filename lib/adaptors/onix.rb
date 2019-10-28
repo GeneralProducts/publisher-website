@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require 'json'
-require 'lisbn'
-require 'sanitize'
-require 'byebug'
-require 'forwardable'
-require_relative 'onix/v3/reference'
+require "json"
+require "lisbn"
+require "sanitize"
+require "byebug"
+require "forwardable"
+require_relative "onix/v3/reference"
 
 ADAPTOR = {
-  'http://ns.editeur.org/onix/3.0/reference' => Adaptors::Onix::V3::Reference
+  "http://ns.editeur.org/onix/3.0/reference" => Adaptors::Onix::V3::Reference
 }.freeze
 
 module Adaptors
@@ -26,7 +26,7 @@ module Adaptors
       # This is found at the top on a line that is something like:
       # <ONIXMessage release="3.0"
       #   xmlns="http://ns.editeur.org/onix/3.0/reference">
-      namespace = doc.namespaces['xmlns']
+      namespace = doc.namespaces["xmlns"]
 
       # Look up the namespace in our hash of adaptors, called ADAPTORS
       adaptor = ADAPTOR.fetch(namespace)

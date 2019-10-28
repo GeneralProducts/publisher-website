@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "../lib/adaptors/onix"
-require_relative "../lib/adaptors/onix/v3"
-require_relative "../lib/adaptors/onix/v3/reference"
 require_relative "../lib/adaptors/onix/v3/reference/product"
 require "nokogiri"
 require "byebug"
@@ -12,11 +9,11 @@ RSpec.describe Adaptors::Onix::V3::Reference::Product do
     described_class.new(product_node)
   end
 
-  let(:product_node) {
+  let(:product_node) do
     doc = Nokogiri::XML(File.open("fixtures/lup.xml"))
     doc.remove_namespaces!
-    doc.xpath('ONIXMessage/Product').first
-  }
+    doc.xpath("ONIXMessage/Product").first
+  end
 
   it "returns an ISBN" do
     expect(subject.isbn).to eq("9781789624151")
@@ -34,7 +31,7 @@ RSpec.describe Adaptors::Onix::V3::Reference::Product do
     let(:product_node) do
       doc = Nokogiri::XML(File.open("fixtures/lup.xml"))
       doc.remove_namespaces!
-      doc.xpath('ONIXMessage/Product')[6]
+      doc.xpath("ONIXMessage/Product")[6]
     end
 
     it "returns the authorship" do
@@ -93,7 +90,7 @@ RSpec.describe Adaptors::Onix::V3::Reference::Product do
     let(:product_node) do
       doc = Nokogiri::XML(File.open("fixtures/lup.xml"))
       doc.remove_namespaces!
-      doc.xpath('ONIXMessage/Product')[3]
+      doc.xpath("ONIXMessage/Product")[3]
     end
 
     it "returns the page count" do
@@ -126,14 +123,14 @@ RSpec.describe Adaptors::Onix::V3::Reference::Product do
     let(:product_node) do
       doc = Nokogiri::XML(File.open("fixtures/lup.xml"))
       doc.remove_namespaces!
-      doc.xpath('ONIXMessage/Product')[3]
+      doc.xpath("ONIXMessage/Product")[3]
     end
 
     it "returns reviews" do
       expect(subject.reviews).to eq(<<~HTML.strip
         <p><h4>Reviews</h4>\n‘A major contribution to the literature on the US role in the Northern Ireland conflict. Elegantly written and factually accurate, it provides valuable new insights into some of the key aspects of American presidential involvement in the \"Troubles\". With penetrating analysis and ground-breaking research from sources on both sides of the Atlantic, this is a compelling book that will appeal to both academics and general readers.'<br>Professor Andrew Wilson, Loyola University Chicago</p>
       HTML
-      )
+                                   )
     end
   end
 end
