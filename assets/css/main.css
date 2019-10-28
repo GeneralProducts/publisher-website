@@ -18,7 +18,6 @@ body {
 /* Content */
 header {
   padding: 50px;
-	margin: 0;
 	text-align: center;
 	text-transform: uppercase;
 	position: relative;
@@ -54,6 +53,10 @@ section {
 	section {
 		width: 800px;
 	}
+
+	aside {
+		width: 50%;
+	}
 }
 
 figure {
@@ -67,7 +70,6 @@ aside {
   text-transform: uppercase;
   background-color: white;
   margin: 0 auto;
-  width: 50%;
   margin-top: 10px;
 	padding-top: 8px;
 	opacity: 0.95;
@@ -135,8 +137,6 @@ a:hover {
 
 /* Lists */
 ul {
-  padding-inline-start: 0 !important;
-	border-radius: 0px;
 	display: flex;
 	flex-flow: row wrap;
 	flex-direction: row;
@@ -277,12 +277,11 @@ footer {
 	border-top: 5px solid #E7EBF4;
 	background-color: #232323;
 	display: flex;
+	flex-direction: column;
 }
 
 footer .wrapper {
-	max-width: 800px;
 	display: flex;
-	margin: 0 auto;
 }
 
 footer ul {
@@ -303,10 +302,14 @@ footer li img {
 	width: 30px;
 }
 
+footer li {
+	font-size: 0.5em;
+	color: white;
+}
+
 @media (min-width: 1110px) {
-	footer li {
-		font-size: 0.5em;
-    color: white;
+	footer {
+		flex-direction: row;
 	}
 }
 
@@ -412,6 +415,7 @@ ul.metadata {
 	justify-content: flex-start;
 	border-top: 2px solid #f1f1eb;
 	padding-top: 10px;
+	padding-left: 0;
 }
 
 .metadata li {
@@ -423,6 +427,7 @@ ul.metadata {
 
 ul.shops {
 	font-family: "Noto sans";
+	padding-left: 0;
 }
 
 ul.shops li {
