@@ -10,7 +10,7 @@ RSpec.describe Adaptors::Onix::V3::Reference do
   end
 
   let(:doc) do
-    doc = Nokogiri::XML(File.open("fixtures/lup.xml"))
+    doc = Nokogiri::XML(File.open("fixtures/snowbooks.xml"))
     doc.remove_namespaces!
   end
 

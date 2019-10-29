@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require_relative "../lib/adaptors/onix/v3/reference"
+require_relative "../lib/adaptors/onix"
 require "nokogiri"
 require "byebug"
 
 RSpec.describe Adaptors::Onix do
   subject do
-    described_class.new(publisher: "lup")
+    described_class.new(publisher: "snowbooks")
   end
 
   it "produces the correct class" do

@@ -78,6 +78,8 @@ module Adaptors
 
           def subject
             xpath("DescriptiveDetail/Subject").map do |subject|
+              next if subject.xpath("SubjectSchemeIdentifier=20")
+
               subject.at_xpath("SubjectHeadingText")
             end.compact.flatten.join(", ")
           end

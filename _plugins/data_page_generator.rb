@@ -17,14 +17,12 @@ module Jekyll
   class DataPage < Page
     include Sanitizer
 
-    def initialize(site, base, data)
-      @site = site
-      @base = base
+    def initialize(data)
       filename = sanitize_filename(data["title"]).to_s
       @dir = "books/" + filename + "/"
 
       process('index.html')
-      read_yaml(File.join(base, '_layouts'), 'book_template.html')
+      read_yaml(File.join(site.source, '_layouts'), 'book_template.html')
       self.data.merge!(data)
     end
   end
@@ -34,7 +32,7 @@ module Jekyll
 
     def generate(site)
       site.data["processed_books"].each do |page_data|
-        site.pages << DataPage.new(site, site.source, page_data)
+        site.pages << DataPage.new(page_data)
       end
     end
   end
