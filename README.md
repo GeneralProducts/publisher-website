@@ -2,12 +2,18 @@
 
 ## Develop
 
-This app was built with [Jekyll](http://jekyllrb.com/) version 3.3.1
+This app was built with [Jekyll](http://jekyllrb.com/) version 4.0.0
 
 Install the dependencies with [Bundler](http://bundler.io/):
 
 ~~~bash
 $ bundle install
+~~~
+
+This app uses Ruby 2.5.5 features. If you manage Ruby versions with RVM, run:
+
+~~~bash
+$ rvm use ruby-2.5.5
 ~~~
 
 Run `jekyll` commands through Bundler to ensure you're using the right versions:
@@ -32,8 +38,11 @@ Using your API key and shop ID from Consonance, run:
 
 ### From ONIX files:
 
-A valid ONIX 3.0 file should be present in the data directory, named for the publisher.
-To process a file called `snowbooks.xml`, run:
+A valid ONIX 3.0 file should be present in the data directory, named for the publisher. It should include a xmlns namespace:
+
+`http://ns.editeur.org/onix/3.0/reference`
+
+To process an ONIX 3 file called `snowbooks.xml`, run:
 
 `ruby lib/seed.rb --adaptor onix --publisher snowbooks`
 

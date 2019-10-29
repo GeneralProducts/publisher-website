@@ -163,6 +163,7 @@ li {
 .covers-container {
 	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0;
 }
 
 .covers-container li {
@@ -178,11 +179,11 @@ li {
 	}
 }
 
-
 .covers-container a {
 	display: flex;
 	flex-direction: column;
-  justify-content: space-between;
+	justify-content: space-between;
+	margin: 0 auto;
 }
 
 .covers-container a:hover {
@@ -267,6 +268,7 @@ footer li img {
 
 footer li, footer li a {
 	color: white;
+	padding: 5px 0;
 }
 
 @media (min-width: 1110px) {
