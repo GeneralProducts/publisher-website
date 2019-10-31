@@ -13,7 +13,7 @@ layout: default
   url = page.url
 %}
 
-<header class="portfolio-page">
+<header class="portfolio-header">
   {% assign todays_date = "now" | date: "%Y%m%d" %}
   {% if page.pub_date_iso > todays_date %}
     <h1 class="secondary">• Coming soon •</h1>
@@ -22,7 +22,7 @@ layout: default
   {% endif %}
 </header>
 
-<container class="portfolio-page">
+<main class="portfolio-page">
   <figure>
     <img class="cover--large" src="/images/covers/{{page.isbn}}.jpg" alt="Cover of ISBN {{page.isbn}} {{page.title}}"/>
   </figure>
@@ -102,4 +102,4 @@ layout: default
       <li><a class="bookstore" rel="noreferrer" target="_blank" href="{{ page.book_finder_url      }}">Book Finder    </a></li>
     </ul>
   </div>
-</container>
+</main>

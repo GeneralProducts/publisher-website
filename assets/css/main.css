@@ -16,12 +16,12 @@ header {
   background-image: url(/images/flower2.jpeg);
 }
 
-header.primary {
+.primary-header {
 	background-image: url(/images/flower.jpg);
 	background-size: 100%;
 }
 
-header.secondary {
+.secondary-header {
 	background-image: url(/images/flower3.jpg);
 	background-size: 100%;
 }
@@ -74,7 +74,7 @@ h1 {
 	}
 }
 
-h1.secondary {
+.secondary {
 	font-family: "Noto sans", Arial, sans-serif;
 	font-size: 20px !important;
 	color: #2e2e2e;
@@ -134,7 +134,6 @@ li {
 }
 
 /* Navigation */
-
 .nav-item-container {
 	padding: 0;
 	font-weight: 800;
@@ -286,38 +285,38 @@ footer li a:hover {
 }
 
 /* Portfolio page */
-container.portfolio-page {
+.portfolio-page {
 	display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
 
 @media (min-width: 1110px) {
-	container.portfolio-page {
+	.portfolio-page {
 		flex-direction: row;
 		max-width: 1000px !important;
 	}
 }
 
 @media (min-width: 1110px) {
-	container.portfolio-page section {
+	.portfolio-page section {
 		margin-left: 30px;
 		flex: 2;
 	}
 }
 
-container.portfolio-page h1 {
+.portfolio-page h1 {
 	letter-spacing: normal;
 	margin: 40px 0;
 	line-height: 1.1;
 	width: 100%;
 }
 
-container.portfolio-page h2 {
+.portfolio-page h2 {
 	line-height: 1.1;
 }
 
-header.portfolio-page {
+.portfolio-header {
 	background-image: url("/images/shadow.jpg");
   background-size: 100%;
 	padding: 30px;
@@ -330,27 +329,31 @@ header.portfolio-page {
 	color: #839292
 }
 
-p.metadata {
-	margin: 40px 0 -30px;
-}
-
-ul.metadata {
+.metadata {
 	display: flex;
+	margin: 40px 0 -30px;
 	border-top: 2px solid #f1f1eb;
 	padding-top: 10px;
 	padding-left: 0;
+	flex-direction: column;
+}
+
+@media (min-width: 1110px) {
+	.metadata {
+		flex-direction: row;
+	}
 }
 
 .metadata li {
 	padding-right: 20px;
 }
 
-ul.shops {
+.shops {
 	font-family: "Noto sans", Arial, sans-serif;
 	padding-left: 0;
 }
 
-ul.shops li {
+.shops li {
 	margin: 0 0 -20px;
 }
 
