@@ -35,13 +35,6 @@ opt_parser = OptionParser.new do |opt|
   opt.separator  "                 via an API_KEY which you should store in ENV['API_KEY']."
   opt.separator  "                 and a SHOP_ID which you should store in ENV['SHOP_ID']."
   opt.separator  "                 Raise a ticket with support@consonance.app to get your key and ID."
-
-  opt.separator  ""
-  opt.separator  "Publishers"
-  opt.separator  "     scribd          ONIX3 data from Scribd, courtesy of Consonance"
-  opt.separator  "     facet           ONIX3 data from Facet, courtesy of Consonance"
-  opt.separator  "     boldwood        ONIX3 data from Boldwood, courtesy of Consonance"
-  opt.separator  "     taylor-francis  ONIX3 data from Taylor and Francis, courtesy of Nielsen"
 end
 
 opt_parser.parse!
