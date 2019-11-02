@@ -1,4 +1,4 @@
-# DOC website
+# Day Of Code website
 
 ## Develop
 
