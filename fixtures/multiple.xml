@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ONIXMessage xmlns="http://ns.editeur.org/onix/3.0/reference" release="3.0">
+  <Header>
+    <Sender>
+      <SenderName>Snowbooks</SenderName>
+      <ContactName>Emma Barnes</ContactName>
+      <EmailAddress>emma@snowbooks.com</EmailAddress>
+    </Sender>
+    <Addressee>
+      <AddresseeName>Day of Code</AddresseeName>
+    </Addressee>
+    <SentDateTime>20191028</SentDateTime>
+    <MessageNote>Snowbooks' Onix Data</MessageNote>
+    <DefaultLanguageOfText>eng</DefaultLanguageOfText>
+    <DefaultCurrencyCode>GBP</DefaultCurrencyCode>
+  </Header>
+
+  <Product>
+  <RecordReference>9781911390220</RecordReference>
+  <NotificationType>03</NotificationType>
+  <RecordSourceIdentifier>
+    <RecordSourceIDType>01</RecordSourceIDType>
+    <IDTypeName>Publisher name</IDTypeName>
+    <IDValue>Snowbooks</IDValue>
+  </RecordSourceIdentifier>
+  <ProductIdentifier>
+    <!--GTIN-13-->
+    <ProductIDType>03</ProductIDType>
+    <IDValue>9781911390220</IDValue>
+  </ProductIdentifier>
+  <ProductIdentifier>
+    <!--ISBN-->
+    <ProductIDType>15</ProductIDType>
+    <IDValue>9781911390220</IDValue>
+  </ProductIdentifier>
+  <Barcode>
+    <BarcodeType>01</BarcodeType>
+    <PositionOnProduct>00</PositionOnProduct>
+  </Barcode>
+  <DescriptiveDetail>
+    <ProductComposition>00</ProductComposition>
+    <ProductForm>BC</ProductForm>
+    <ProductFormDetail>B105</ProductFormDetail>
+    <ProductPackaging>00</ProductPackaging>
+    <Measure>
+      <MeasureType>01</MeasureType>
+      <Measurement>19.8</Measurement>
+      <MeasureUnitCode>cm</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>01</MeasureType>
+      <Measurement>7.8125</Measurement>
+      <MeasureUnitCode>in</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>01</MeasureType>
+      <Measurement>198</Measurement>
+      <MeasureUnitCode>mm</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>02</MeasureType>
+      <Measurement>12.9</Measurement>
+      <MeasureUnitCode>cm</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>02</MeasureType>
+      <Measurement>5.125</Measurement>
+      <MeasureUnitCode>in</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>02</MeasureType>
+      <Measurement>129</Measurement>
+      <MeasureUnitCode>mm</MeasureUnitCode>
+    </Measure>
+    <Collection>
+      <CollectionType>10</CollectionType>
+      <CollectionSequence>
+        <CollectionSequenceType>03</CollectionSequenceType>
+        <CollectionSequenceNumber>1</CollectionSequenceNumber>
+      </CollectionSequence>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>02</TitleElementLevel>
+          <TitlePrefix>The</TitlePrefix>
+          <TitleWithoutPrefix>Fire Stealers</TitleWithoutPrefix>
+        </TitleElement>
+      </TitleDetail>
+    </Collection>
+    <TitleDetail>
+      <TitleType>01</TitleType>
+      <TitleElement>
+        <TitleElementLevel>01</TitleElementLevel>
+        <TitlePrefix>The</TitlePrefix>
+        <TitleWithoutPrefix>Goddess Project</TitleWithoutPrefix>
+      </TitleElement>
+    </TitleDetail>
+    <Contributor>
+      <SequenceNumber>1</SequenceNumber>
+      <ContributorRole>A01</ContributorRole>
+      <NameType>00</NameType>
+      <NameIdentifier>
+        <NameIDType>01</NameIDType>
+        <IDTypeName>system-internal-identifier</IDTypeName>
+        <IDValue>54037</IDValue>
+      </NameIdentifier>
+      <PersonName>Bryan Wigmore</PersonName>
+      <PersonNameInverted>Wigmore, Bryan</PersonNameInverted>
+      <NamesBeforeKey>Bryan</NamesBeforeKey>
+      <KeyNames>Wigmore</KeyNames>
+      <BiographicalNote textformat="07">Bryan Wigmore lives near the South Downs in Sussex, England, an ancient landscape of grave-barrows and yew groves that has always fired his imagination. His writing explores how people relate to nature and to their own origins, and draws on an interest in shamanism and hermetic magic.</BiographicalNote>
+    </Contributor>
+    <NoEdition/>
+    <Language>
+      <LanguageRole>01</LanguageRole>
+      <LanguageCode>eng</LanguageCode>
+    </Language>
+    <Subject>
+      <!--Thema main subject-->
+      <MainSubject/>
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>FM</SubjectCode>
+      <SubjectHeadingText>Fantasy</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema subject-->
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>FLM</SubjectCode>
+      <SubjectHeadingText>Science fiction: steampunk</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema subject-->
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.2</SubjectSchemeVersion>
+      <SubjectCode>SPCA1</SubjectCode>
+      <SubjectHeadingText>Scuba diving</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema subject-->
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>VXW</SubjectCode>
+      <SubjectHeadingText>Mysticism, magic &amp; occult interests</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema subject-->
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>VXWS</SubjectCode>
+      <SubjectHeadingText>Shamanism, paganism &amp; druidry</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema time period qualifier-->
+      <SubjectSchemeIdentifier>96</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>3MNQ-GB-V</SubjectCode>
+      <SubjectHeadingText>Victorian period (1837–1901)</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Main BIC subject category-->
+      <MainSubject/>
+      <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+      <SubjectCode>FM</SubjectCode>
+      <SubjectHeadingText>Fantasy</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Main BISAC subject code-->
+      <MainSubject/>
+      <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2018</SubjectSchemeVersion>
+      <SubjectCode>FIC009000</SubjectCode>
+      <SubjectHeadingText>FICTION / Fantasy / General</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Keywords-->
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>Shaman;shamanism;shamanic;amnesia;twins;goddess;dreadnought;fantasy;kali;steamship;steampunk;diving;freediving;Victorian;magick;psychic;twincest;maritime</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Main publisher subject-->
+      <MainSubject/>
+      <SubjectSchemeIdentifier>23</SubjectSchemeIdentifier>
+      <SubjectHeadingText>SF / Fantasy</SubjectHeadingText>
+    </Subject>
+    <Audience>
+      <!--ONIX audience-->
+      <AudienceCodeType>01</AudienceCodeType>
+      <AudienceCodeValue>01</AudienceCodeValue>
+    </Audience>
+  </DescriptiveDetail>
+  <CollateralDetail>
+    <TextContent>
+      <TextType>03</TextType>
+      <ContentAudience>00</ContentAudience>
+      <Text textformat="02"><![CDATA[<p>‘Ancient terror, modern error, future era.’ Otter shook himself. ‘Mean much to you?’</p><p>Two years after being washed up on a remote beach, freedivers Orc and Cass still have no idea who they are or where they came from. Worst of all, they feel like lovers but look like brother and sister, and must repress their instincts for fear of committing a terrible mistake.</p><p>Now at last they’ve tracked down a psychic artefact powerful enough to restore their memories. But others also seek its forbidden magic. To reach it, deep within a sunken ruin, they must flirt with a ruthless occult conspiracy, one intent on summoning an ancient goddess to destroy the dreadnoughts of the Empyreal fleet.</p><p>The depths of the sea, of the past, of the world’s collective mind: down there are truths, but also madness and despair. And a power that will plunge the world back to a new dark age, if it can’t be stopped.</p>]]></Text>
+    </TextContent>
+    <TextContent>
+      <TextType>06</TextType>
+      <ContentAudience>00</ContentAudience>
+      <Text textformat="02"><![CDATA[<p>"In the end, it's one of my best reads so far this year." -- Brian G. Turner, <i>SFF Chronicles</i></p>]]></Text>
+      <SourceTitle>SFF Chronicles</SourceTitle>
+    </TextContent>
+    <SupportingResource>
+      <ResourceContentType>01</ResourceContentType>
+      <ContentAudience>00</ContentAudience>
+      <ResourceMode>03</ResourceMode>
+      <ResourceVersion>
+        <ResourceForm>02</ResourceForm>
+        <ResourceVersionFeature>
+          <!--Height-->
+          <ResourceVersionFeatureType>02</ResourceVersionFeatureType>
+          <FeatureValue>1356</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Width-->
+          <ResourceVersionFeatureType>03</ResourceVersionFeatureType>
+          <FeatureValue>884</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Megabytes-->
+          <ResourceVersionFeatureType>05</ResourceVersionFeatureType>
+          <FeatureValue>0.54</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--MD5 hash-->
+          <ResourceVersionFeatureType>06</ResourceVersionFeatureType>
+          <FeatureValue>b638385772ee039f2cf22274f9c868e9</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Bytes-->
+          <ResourceVersionFeatureType>07</ResourceVersionFeatureType>
+          <FeatureValue>537271</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--SHA256 hash-->
+          <ResourceVersionFeatureType>08</ResourceVersionFeatureType>
+          <FeatureValue>77044941bc7ff2398d7d01234aaf95160f5d9cb46ac7c74e4fa12ee24572f646</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceLink>https://bibliocloudimages.s3-eu-west-1.amazonaws.com/1/250806//_jpg_rgb_original.jpg</ResourceLink>
+      </ResourceVersion>
+    </SupportingResource>
+    <SupportingResource>
+      <ResourceContentType>03</ResourceContentType>
+      <ContentAudience>00</ContentAudience>
+      <ResourceMode>03</ResourceMode>
+      <ResourceVersion>
+        <ResourceForm>02</ResourceForm>
+        <ResourceVersionFeature>
+          <!--Height-->
+          <ResourceVersionFeatureType>02</ResourceVersionFeatureType>
+          <FeatureValue>1339</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Width-->
+          <ResourceVersionFeatureType>03</ResourceVersionFeatureType>
+          <FeatureValue>1162</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Megabytes-->
+          <ResourceVersionFeatureType>05</ResourceVersionFeatureType>
+          <FeatureValue>1.1</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--MD5 hash-->
+          <ResourceVersionFeatureType>06</ResourceVersionFeatureType>
+          <FeatureValue>8d768a54cfa253ac746f7d1c6ea8f10d</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Bytes-->
+          <ResourceVersionFeatureType>07</ResourceVersionFeatureType>
+          <FeatureValue>1065182</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--SHA256 hash-->
+          <ResourceVersionFeatureType>08</ResourceVersionFeatureType>
+          <FeatureValue>6ff61c2b3314d9ab89c741c0953a23f6912df4587a8ab4f5a63b49978a36f004</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceLink>https://bibliocloudimages.s3-eu-west-1.amazonaws.com/1/251213//_jpg_rgb_original.jpg</ResourceLink>
+      </ResourceVersion>
+    </SupportingResource>
+  </CollateralDetail>
+  <PublishingDetail>
+    <Imprint>
+      <ImprintIdentifier>
+        <!--Pubisher's own imprint code-->
+        <ImprintIDType>01</ImprintIDType>
+        <IDTypeName>publisher-code</IDTypeName>
+        <IDValue>SB</IDValue>
+      </ImprintIdentifier>
+      <ImprintName>Snowbooks</ImprintName>
+    </Imprint>
+    <CityOfPublication>Oxford</CityOfPublication>
+    <CountryOfPublication>GB</CountryOfPublication>
+    <PublishingStatus>04</PublishingStatus>
+    <PublishingDate>
+      <!--Nominal publication date-->
+      <PublishingDateRole>01</PublishingDateRole>
+      <Date dateformat="00">20170102</Date>
+    </PublishingDate>
+    <SalesRights>
+      <SalesRightsType>01</SalesRightsType>
+      <Territory>
+        <RegionsIncluded>WORLD</RegionsIncluded>
+      </Territory>
+    </SalesRights>
+  </PublishingDetail>
+  <RelatedMaterial>
+    <RelatedWork>
+      <!--Product is a manifestation of-->
+      <WorkRelationCode>01</WorkRelationCode>
+      <WorkIdentifier>
+        <!--Proprietary system identifier for the work-->
+        <WorkIDType>01</WorkIDType>
+        <IDTypeName>system-internal-identifier</IDTypeName>
+        <IDValue>com.snowbooks.onix.49049</IDValue>
+      </WorkIdentifier>
+    </RelatedWork>
+    <RelatedWork>
+      <!--Product's work in same collection as-->
+      <WorkRelationCode>04</WorkRelationCode>
+      <WorkIdentifier>
+        <!--Proprietary system identifier for the work-->
+        <WorkIDType>01</WorkIDType>
+        <IDTypeName>system-internal-identifier</IDTypeName>
+        <IDValue>com.snowbooks.onix.72119</IDValue>
+      </WorkIdentifier>
+    </RelatedWork>
+    <RelatedWork>
+      <!--Product's work by same contributor as-->
+      <WorkRelationCode>05</WorkRelationCode>
+      <WorkIdentifier>
+        <!--Proprietary system identifier for the work-->
+        <WorkIDType>01</WorkIDType>
+        <IDTypeName>system-internal-identifier</IDTypeName>
+        <IDValue>com.snowbooks.onix.72119</IDValue>
+      </WorkIdentifier>
+    </RelatedWork>
+    <RelatedProduct>
+      <!--Electronic version available as-->
+      <ProductRelationCode>27</ProductRelationCode>
+      <ProductIdentifier>
+        <!--GTIN-13-->
+        <ProductIDType>03</ProductIDType>
+        <IDValue>9781911390237</IDValue>
+      </ProductIdentifier>
+      <ProductIdentifier>
+        <!--ISBN-->
+        <ProductIDType>15</ProductIDType>
+        <IDValue>9781911390237</IDValue>
+      </ProductIdentifier>
+      <ProductForm>EA</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+    </RelatedProduct>
+  </RelatedMaterial>
+  <ProductSupply>
+    <Market>
+      <Territory>
+        <CountriesIncluded>AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW</CountriesIncluded>
+      </Territory>
+    </Market>
+    <SupplyDetail>
+      <Supplier>
+        <SupplierRole>01</SupplierRole>
+        <SupplierName>Snowbooks Ltd</SupplierName>
+      </Supplier>
+      <ProductAvailability>20</ProductAvailability>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>19.95</PriceAmount>
+        <CurrencyCode>AUD</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>AU AW BV CC CK CX FJ FM GS HM KM MH MP NC NF NR PN SB TC TO TV VU WF WS</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>19.95</PriceAmount>
+        <CurrencyCode>CAD</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>CA</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>15.99</PriceAmount>
+        <CurrencyCode>EUR</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>AD AL AT BA BE BG BY CH CY CZ DE DK EE ES FI FO FR GL GR HR HU IE IS IT LI LT LU LV MC MD ME MK MT NL NO PL PT RO RS RU SE SI SJ SK SM UA VA</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>02</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>8.99</PriceAmount>
+        <CurrencyCode>GBP</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>FK GB GG GI IM JE VG</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>799</PriceAmount>
+        <CurrencyCode>INR</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>BD IN LK NP PK</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>19.95</PriceAmount>
+        <CurrencyCode>NZD</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>NZ</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>15.95</PriceAmount>
+        <CurrencyCode>USD</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>AE AF AG AI AM AO AQ AR AS AX AZ BB BF BH BI BJ BL BM BN BO BQ BR BS BT BW BZ CD CF CG CI CL CM CN CO CR CU CV CW DJ DM DO DZ EC EG EH ER ET GA GD GE GF GH GM GN GP GQ GT GU GW GY HK HN HT ID IL IO IQ IR JM JO JP KE KG KH KI KN KP KR KW KY KZ LA LB LC LR LS LY MA MF MG ML MM MN MO MQ MR MS MU MV MW MX MY MZ NA NE NG NI NU OM PA PE PF PG PH PM PR PS PW PY QA RE RW SA SC SD SG SH SL SN SO SR SS ST SV SX SY SZ TD TF TG TH TJ TK TL TM TN TR TT TW TZ UG UM US UY UZ VC VE VI VN YE YT ZA ZM ZW</CountriesIncluded>
+        </Territory>
+      </Price>
+    </SupplyDetail>
+  </ProductSupply>
+</Product>
+  <Product>
+  <RecordReference>9781911390220</RecordReference>
+  <NotificationType>03</NotificationType>
+  <RecordSourceIdentifier>
+    <RecordSourceIDType>01</RecordSourceIDType>
+    <IDTypeName>Publisher name</IDTypeName>
+    <IDValue>Snowbooks</IDValue>
+  </RecordSourceIdentifier>
+  <ProductIdentifier>
+    <!--GTIN-13-->
+    <ProductIDType>03</ProductIDType>
+    <IDValue>9781911390220</IDValue>
+  </ProductIdentifier>
+  <ProductIdentifier>
+    <!--ISBN-->
+    <ProductIDType>15</ProductIDType>
+    <IDValue>9781911390220</IDValue>
+  </ProductIdentifier>
+  <Barcode>
+    <BarcodeType>01</BarcodeType>
+    <PositionOnProduct>00</PositionOnProduct>
+  </Barcode>
+  <DescriptiveDetail>
+    <ProductComposition>00</ProductComposition>
+    <ProductForm>BC</ProductForm>
+    <ProductFormDetail>B105</ProductFormDetail>
+    <ProductPackaging>00</ProductPackaging>
+    <Measure>
+      <MeasureType>01</MeasureType>
+      <Measurement>19.8</Measurement>
+      <MeasureUnitCode>cm</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>01</MeasureType>
+      <Measurement>7.8125</Measurement>
+      <MeasureUnitCode>in</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>01</MeasureType>
+      <Measurement>198</Measurement>
+      <MeasureUnitCode>mm</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>02</MeasureType>
+      <Measurement>12.9</Measurement>
+      <MeasureUnitCode>cm</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>02</MeasureType>
+      <Measurement>5.125</Measurement>
+      <MeasureUnitCode>in</MeasureUnitCode>
+    </Measure>
+    <Measure>
+      <MeasureType>02</MeasureType>
+      <Measurement>129</Measurement>
+      <MeasureUnitCode>mm</MeasureUnitCode>
+    </Measure>
+    <Collection>
+      <CollectionType>10</CollectionType>
+      <CollectionSequence>
+        <CollectionSequenceType>03</CollectionSequenceType>
+        <CollectionSequenceNumber>1</CollectionSequenceNumber>
+      </CollectionSequence>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>02</TitleElementLevel>
+          <TitlePrefix>The</TitlePrefix>
+          <TitleWithoutPrefix>Fire Stealers</TitleWithoutPrefix>
+        </TitleElement>
+      </TitleDetail>
+    </Collection>
+    <TitleDetail>
+      <TitleType>01</TitleType>
+      <TitleElement>
+        <TitleElementLevel>01</TitleElementLevel>
+        <TitlePrefix>The</TitlePrefix>
+        <TitleWithoutPrefix>Goddess Project</TitleWithoutPrefix>
+      </TitleElement>
+    </TitleDetail>
+    <Contributor>
+      <SequenceNumber>1</SequenceNumber>
+      <ContributorRole>A01</ContributorRole>
+      <NameType>00</NameType>
+      <NameIdentifier>
+        <NameIDType>01</NameIDType>
+        <IDTypeName>system-internal-identifier</IDTypeName>
+        <IDValue>54037</IDValue>
+      </NameIdentifier>
+      <PersonName>Bryan Wigmore</PersonName>
+      <PersonNameInverted>Wigmore, Bryan</PersonNameInverted>
+      <NamesBeforeKey>Bryan</NamesBeforeKey>
+      <KeyNames>Wigmore</KeyNames>
+      <BiographicalNote textformat="07">Bryan Wigmore lives near the South Downs in Sussex, England, an ancient landscape of grave-barrows and yew groves that has always fired his imagination. His writing explores how people relate to nature and to their own origins, and draws on an interest in shamanism and hermetic magic.</BiographicalNote>
+    </Contributor>
+    <NoEdition/>
+    <Language>
+      <LanguageRole>01</LanguageRole>
+      <LanguageCode>eng</LanguageCode>
+    </Language>
+    <Subject>
+      <!--Thema main subject-->
+      <MainSubject/>
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>FM</SubjectCode>
+      <SubjectHeadingText>Fantasy</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema subject-->
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>FLM</SubjectCode>
+      <SubjectHeadingText>Science fiction: steampunk</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema subject-->
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.2</SubjectSchemeVersion>
+      <SubjectCode>SPCA1</SubjectCode>
+      <SubjectHeadingText>Scuba diving</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema subject-->
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>VXW</SubjectCode>
+      <SubjectHeadingText>Mysticism, magic &amp; occult interests</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema subject-->
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>VXWS</SubjectCode>
+      <SubjectHeadingText>Shamanism, paganism &amp; druidry</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Thema time period qualifier-->
+      <SubjectSchemeIdentifier>96</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.0</SubjectSchemeVersion>
+      <SubjectCode>3MNQ-GB-V</SubjectCode>
+      <SubjectHeadingText>Victorian period (1837–1901)</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Main BIC subject category-->
+      <MainSubject/>
+      <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+      <SubjectCode>FM</SubjectCode>
+      <SubjectHeadingText>Fantasy</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Main BISAC subject code-->
+      <MainSubject/>
+      <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2018</SubjectSchemeVersion>
+      <SubjectCode>FIC009000</SubjectCode>
+      <SubjectHeadingText>FICTION / Fantasy / General</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Keywords-->
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>Shaman;shamanism;shamanic;amnesia;twins;goddess;dreadnought;fantasy;kali;steamship;steampunk;diving;freediving;Victorian;magick;psychic;twincest;maritime</SubjectHeadingText>
+    </Subject>
+    <Subject>
+      <!--Main publisher subject-->
+      <MainSubject/>
+      <SubjectSchemeIdentifier>23</SubjectSchemeIdentifier>
+      <SubjectHeadingText>SF / Fantasy</SubjectHeadingText>
+    </Subject>
+    <Audience>
+      <!--ONIX audience-->
+      <AudienceCodeType>01</AudienceCodeType>
+      <AudienceCodeValue>01</AudienceCodeValue>
+    </Audience>
+  </DescriptiveDetail>
+  <CollateralDetail>
+    <TextContent>
+      <TextType>03</TextType>
+      <ContentAudience>00</ContentAudience>
+      <Text textformat="02"><![CDATA[<p>‘Ancient terror, modern error, future era.’ Otter shook himself. ‘Mean much to you?’</p><p>Two years after being washed up on a remote beach, freedivers Orc and Cass still have no idea who they are or where they came from. Worst of all, they feel like lovers but look like brother and sister, and must repress their instincts for fear of committing a terrible mistake.</p><p>Now at last they’ve tracked down a psychic artefact powerful enough to restore their memories. But others also seek its forbidden magic. To reach it, deep within a sunken ruin, they must flirt with a ruthless occult conspiracy, one intent on summoning an ancient goddess to destroy the dreadnoughts of the Empyreal fleet.</p><p>The depths of the sea, of the past, of the world’s collective mind: down there are truths, but also madness and despair. And a power that will plunge the world back to a new dark age, if it can’t be stopped.</p>]]></Text>
+    </TextContent>
+    <TextContent>
+      <TextType>06</TextType>
+      <ContentAudience>00</ContentAudience>
+      <Text textformat="02"><![CDATA[<p>"In the end, it's one of my best reads so far this year." -- Brian G. Turner, <i>SFF Chronicles</i></p>]]></Text>
+      <SourceTitle>SFF Chronicles</SourceTitle>
+    </TextContent>
+    <SupportingResource>
+      <ResourceContentType>01</ResourceContentType>
+      <ContentAudience>00</ContentAudience>
+      <ResourceMode>03</ResourceMode>
+      <ResourceVersion>
+        <ResourceForm>02</ResourceForm>
+        <ResourceVersionFeature>
+          <!--Height-->
+          <ResourceVersionFeatureType>02</ResourceVersionFeatureType>
+          <FeatureValue>1356</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Width-->
+          <ResourceVersionFeatureType>03</ResourceVersionFeatureType>
+          <FeatureValue>884</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Megabytes-->
+          <ResourceVersionFeatureType>05</ResourceVersionFeatureType>
+          <FeatureValue>0.54</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--MD5 hash-->
+          <ResourceVersionFeatureType>06</ResourceVersionFeatureType>
+          <FeatureValue>b638385772ee039f2cf22274f9c868e9</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Bytes-->
+          <ResourceVersionFeatureType>07</ResourceVersionFeatureType>
+          <FeatureValue>537271</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--SHA256 hash-->
+          <ResourceVersionFeatureType>08</ResourceVersionFeatureType>
+          <FeatureValue>77044941bc7ff2398d7d01234aaf95160f5d9cb46ac7c74e4fa12ee24572f646</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceLink>https://bibliocloudimages.s3-eu-west-1.amazonaws.com/1/250806//_jpg_rgb_original.jpg</ResourceLink>
+      </ResourceVersion>
+    </SupportingResource>
+    <SupportingResource>
+      <ResourceContentType>03</ResourceContentType>
+      <ContentAudience>00</ContentAudience>
+      <ResourceMode>03</ResourceMode>
+      <ResourceVersion>
+        <ResourceForm>02</ResourceForm>
+        <ResourceVersionFeature>
+          <!--Height-->
+          <ResourceVersionFeatureType>02</ResourceVersionFeatureType>
+          <FeatureValue>1339</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Width-->
+          <ResourceVersionFeatureType>03</ResourceVersionFeatureType>
+          <FeatureValue>1162</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Megabytes-->
+          <ResourceVersionFeatureType>05</ResourceVersionFeatureType>
+          <FeatureValue>1.1</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--MD5 hash-->
+          <ResourceVersionFeatureType>06</ResourceVersionFeatureType>
+          <FeatureValue>8d768a54cfa253ac746f7d1c6ea8f10d</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--Bytes-->
+          <ResourceVersionFeatureType>07</ResourceVersionFeatureType>
+          <FeatureValue>1065182</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceVersionFeature>
+          <!--SHA256 hash-->
+          <ResourceVersionFeatureType>08</ResourceVersionFeatureType>
+          <FeatureValue>6ff61c2b3314d9ab89c741c0953a23f6912df4587a8ab4f5a63b49978a36f004</FeatureValue>
+        </ResourceVersionFeature>
+        <ResourceLink>https://bibliocloudimages.s3-eu-west-1.amazonaws.com/1/251213//_jpg_rgb_original.jpg</ResourceLink>
+      </ResourceVersion>
+    </SupportingResource>
+  </CollateralDetail>
+  <PublishingDetail>
+    <Imprint>
+      <ImprintIdentifier>
+        <!--Pubisher's own imprint code-->
+        <ImprintIDType>01</ImprintIDType>
+        <IDTypeName>publisher-code</IDTypeName>
+        <IDValue>SB</IDValue>
+      </ImprintIdentifier>
+      <ImprintName>Snowbooks</ImprintName>
+    </Imprint>
+    <CityOfPublication>Oxford</CityOfPublication>
+    <CountryOfPublication>GB</CountryOfPublication>
+    <PublishingStatus>04</PublishingStatus>
+    <PublishingDate>
+      <!--Nominal publication date-->
+      <PublishingDateRole>01</PublishingDateRole>
+      <Date dateformat="00">20170102</Date>
+    </PublishingDate>
+    <SalesRights>
+      <SalesRightsType>01</SalesRightsType>
+      <Territory>
+        <RegionsIncluded>WORLD</RegionsIncluded>
+      </Territory>
+    </SalesRights>
+  </PublishingDetail>
+  <RelatedMaterial>
+    <RelatedWork>
+      <!--Product is a manifestation of-->
+      <WorkRelationCode>01</WorkRelationCode>
+      <WorkIdentifier>
+        <!--Proprietary system identifier for the work-->
+        <WorkIDType>01</WorkIDType>
+        <IDTypeName>system-internal-identifier</IDTypeName>
+        <IDValue>com.snowbooks.onix.49049</IDValue>
+      </WorkIdentifier>
+    </RelatedWork>
+    <RelatedWork>
+      <!--Product's work in same collection as-->
+      <WorkRelationCode>04</WorkRelationCode>
+      <WorkIdentifier>
+        <!--Proprietary system identifier for the work-->
+        <WorkIDType>01</WorkIDType>
+        <IDTypeName>system-internal-identifier</IDTypeName>
+        <IDValue>com.snowbooks.onix.72119</IDValue>
+      </WorkIdentifier>
+    </RelatedWork>
+    <RelatedWork>
+      <!--Product's work by same contributor as-->
+      <WorkRelationCode>05</WorkRelationCode>
+      <WorkIdentifier>
+        <!--Proprietary system identifier for the work-->
+        <WorkIDType>01</WorkIDType>
+        <IDTypeName>system-internal-identifier</IDTypeName>
+        <IDValue>com.snowbooks.onix.72119</IDValue>
+      </WorkIdentifier>
+    </RelatedWork>
+    <RelatedProduct>
+      <!--Electronic version available as-->
+      <ProductRelationCode>27</ProductRelationCode>
+      <ProductIdentifier>
+        <!--GTIN-13-->
+        <ProductIDType>03</ProductIDType>
+        <IDValue>9781911390237</IDValue>
+      </ProductIdentifier>
+      <ProductIdentifier>
+        <!--ISBN-->
+        <ProductIDType>15</ProductIDType>
+        <IDValue>9781911390237</IDValue>
+      </ProductIdentifier>
+      <ProductForm>EA</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+    </RelatedProduct>
+  </RelatedMaterial>
+  <ProductSupply>
+    <Market>
+      <Territory>
+        <CountriesIncluded>AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW</CountriesIncluded>
+      </Territory>
+    </Market>
+    <SupplyDetail>
+      <Supplier>
+        <SupplierRole>01</SupplierRole>
+        <SupplierName>Snowbooks Ltd</SupplierName>
+      </Supplier>
+      <ProductAvailability>20</ProductAvailability>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>19.95</PriceAmount>
+        <CurrencyCode>AUD</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>AU AW BV CC CK CX FJ FM GS HM KM MH MP NC NF NR PN SB TC TO TV VU WF WS</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>19.95</PriceAmount>
+        <CurrencyCode>CAD</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>CA</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>15.99</PriceAmount>
+        <CurrencyCode>EUR</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>AD AL AT BA BE BG BY CH CY CZ DE DK EE ES FI FO FR GL GR HR HU IE IS IT LI LT LU LV MC MD ME MK MT NL NO PL PT RO RS RU SE SI SJ SK SM UA VA</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>02</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>8.99</PriceAmount>
+        <CurrencyCode>GBP</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>FK GB GG GI IM JE VG</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>799</PriceAmount>
+        <CurrencyCode>INR</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>BD IN LK NP PK</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>19.95</PriceAmount>
+        <CurrencyCode>NZD</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>NZ</CountriesIncluded>
+        </Territory>
+      </Price>
+      <Price>
+        <PriceType>01</PriceType>
+        <PriceQualifier>05</PriceQualifier>
+        <PriceStatus>02</PriceStatus>
+        <PriceAmount>15.95</PriceAmount>
+        <CurrencyCode>USD</CurrencyCode>
+        <Territory>
+          <CountriesIncluded>AE AF AG AI AM AO AQ AR AS AX AZ BB BF BH BI BJ BL BM BN BO BQ BR BS BT BW BZ CD CF CG CI CL CM CN CO CR CU CV CW DJ DM DO DZ EC EG EH ER ET GA GD GE GF GH GM GN GP GQ GT GU GW GY HK HN HT ID IL IO IQ IR JM JO JP KE KG KH KI KN KP KR KW KY KZ LA LB LC LR LS LY MA MF MG ML MM MN MO MQ MR MS MU MV MW MX MY MZ NA NE NG NI NU OM PA PE PF PG PH PM PR PS PW PY QA RE RW SA SC SD SG SH SL SN SO SR SS ST SV SX SY SZ TD TF TG TH TJ TK TL TM TN TR TT TW TZ UG UM US UY UZ VC VE VI VN YE YT ZA ZM ZW</CountriesIncluded>
+        </Territory>
+      </Price>
+    </SupplyDetail>
+  </ProductSupply>
+</Product>
+</ONIXMessage>
