@@ -28,6 +28,10 @@ module Adaptors
             at_xpath("ProductIdentifier[ProductIDType=15]/IDValue").content
           end
 
+          def publisher
+            at_xpath("PublishingDetail/Publisher[PublishingRole=01]/PublisherName").content
+          end
+
           def format
             form = at_xpath("DescriptiveDetail/ProductForm").content
             case form
@@ -43,7 +47,7 @@ module Adaptors
           end
 
           def authorship
-            names = contributors.map(&:person_name)
+            names = contributors.map(&:name)
 
             case names.length
             when 0
@@ -106,7 +110,7 @@ module Adaptors
 
             return unless date_string
 
-            Date.parse(date_string).strftime("%b %d, %Y")
+            Date.parse(date_string).strftime("%b %d, %Y") if date_string.is_a? Date
           end
 
           def pub_date_iso

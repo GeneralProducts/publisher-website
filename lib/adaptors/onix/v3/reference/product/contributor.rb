@@ -30,13 +30,21 @@ module Adaptors
               at_xpath("SequenceNumber")&.content&.to_i
             end
 
-            def person_name
-              at_xpath("PersonName")&.content
+            def name
+              person_name || corporate_name
             end
 
             private
 
             def_delegators :node, :at_xpath
+
+            def person_name
+              at_xpath("PersonName")&.content
+            end
+
+            def corporate_name
+              at_xpath("CorporateName")&.content
+            end
 
             attr_reader :node
           end

@@ -7,8 +7,9 @@ require "byebug"
 require "open-uri"
 
 class WriteData
-  def initialize(source)
+  def initialize(source, publisher)
     @source = source
+    @publisher = publisher
   end
 
   def call
@@ -22,7 +23,7 @@ class WriteData
   attr_reader :source
 
   def processed_data
-    @_processed_data ||= source.products.map do |product|
+    @_processed_data ||= source.products(@publisher).map do |product|
       {
         "title" => product.title,
         "isbn" => product.isbn,

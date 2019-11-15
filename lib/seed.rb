@@ -48,8 +48,8 @@ opt_parser.parse!
 
 if ARGV[0] == "onix"
   puts "\e[32mONIX is being processed for #{ARGV[1]}. Processed data will be put into _data/processed_books.json\e[0m"
-  source = Adaptors::Onix.new(publisher: ARGV[1])
-  WriteData.new(source).call
+  source = Adaptors::Onix.new
+  WriteData.new(source, ARGV[1]).call
 
 elsif ARGV[0] == "consonance"
   puts "\e[32mConsonance is being queried. Processed data will be put into _data/processed_books.json\e[0m"
