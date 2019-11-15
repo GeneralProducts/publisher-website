@@ -30,12 +30,13 @@ module Adaptors
         # We refer to it as "Product", and Ruby first looks for it
         # as Adaptors::Onix::V3::Reference::Product,
         # which is exactly where it is
-        def products
+        def products(publisher)
           titles = []
           doc.xpath("ONIXMessage/Product").map do |product_node|
             product = Product.new(product_node)
             # If you want to restrict the products by format, try something like the next line:
             # next unless ["Paperback","Hardback","Digital"].include? product.format
+            next unless product&.publisher&.downcase&.include? publisher.downcase
             next if titles.include? product.title
 
             titles << product.title

@@ -6,7 +6,7 @@ require "byebug"
 
 RSpec.describe Adaptors::Onix do
   subject do
-    described_class.new(publisher: "snowbooks")
+    described_class.new
   end
 
   it "produces the correct class" do
@@ -18,6 +18,6 @@ RSpec.describe Adaptors::Onix do
   end
 
   it "passes a call to products on correctly to Reference" do
-    expect(subject.products.count).to eq(8)
+    expect(subject.products("").count).to eq(1955)
   end
 end

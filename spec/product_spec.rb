@@ -107,7 +107,7 @@ RSpec.describe Adaptors::Onix::V3::Reference::Product do
   end
 
   it "returns the pub date" do
-    expect(subject.pub_date).to eq("Jan 02, 2017")
+    expect(subject.pub_date).to eq(nil)
   end
 
   it "returns the pub_date in iso format" do
@@ -117,15 +117,15 @@ RSpec.describe Adaptors::Onix::V3::Reference::Product do
   it "returns the blurb" do
     expect(subject.blurb).to eq(<<~HTML.strip
       <p>‘Ancient terror, modern error, future era.’ Otter shook himself. ‘Mean much to you?’</p><p>Two years after being washed up on a remote beach, freedivers Orc and Cass still have no idea who they are or where they came from. Worst of all, they feel like lovers but look like brother and sister, and must repress their instincts for fear of committing a terrible mistake.</p><p>Now at last they’ve tracked down a psychic artefact powerful enough to restore their memories. But others also seek its forbidden magic. To reach it, deep within a sunken ruin, they must flirt with a ruthless occult conspiracy, one intent on summoning an ancient goddess to destroy the dreadnoughts of the Empyreal fleet.</p><p>The depths of the sea, of the past, of the world’s collective mind: down there are truths, but also madness and despair. And a power that will plunge the world back to a new dark age, if it can’t be stopped.</p>
-      HTML
-    )
+    HTML
+                               )
   end
 
   it "returns reviews" do
-      expect(subject.reviews).to eq(<<~HTML.strip
-        <p>"In the end, it's one of my best reads so far this year." -- Brian G. Turner, <i>SFF Chronicles</i></p>
-      HTML
-    )
+    expect(subject.reviews).to eq(<<~HTML.strip
+      <p>"In the end, it's one of my best reads so far this year." -- Brian G. Turner, <i>SFF Chronicles</i></p>
+    HTML
+                                 )
   end
 
   context "without reviews" do

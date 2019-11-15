@@ -15,11 +15,10 @@ module Adaptors
   # An adaptor that gets the publisher's ONIX and processes it with Nokogiri
   class Onix
     extend Forwardable
-    def initialize(publisher: nil)
-      # Work out where the publisher's ONIX file is expected to be
-      filename = "_data/#{publisher}.xml"
+    def initialize
+      filename = "_data/onix.xml"
 
-      # Use Nokogiri to open the publisher's ONIX file
+      # Use Nokogiri to open the ONIX file
       doc = Nokogiri::XML(File.open(filename))
 
       # Read the namespace of the file

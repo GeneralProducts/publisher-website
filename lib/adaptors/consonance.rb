@@ -105,9 +105,9 @@ module Adaptors
       uri = URI.parse(
         "https://web.consonance.app/api/products.json?q[shops_id_eq]=#{ENV['SHOP_ID']}&page=#{page}"
       )
-      request                  = Net::HTTP::Get.new(uri)
+      request = Net::HTTP::Get.new(uri)
       request["Authorization"] = "Token token=#{ENV['API_KEY']}"
-      req_options              = { use_ssl: uri.scheme == "https" }
+      req_options = { use_ssl: uri.scheme == "https" }
       response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
         http.request(request)
       end

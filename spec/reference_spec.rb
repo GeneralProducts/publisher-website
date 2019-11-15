@@ -15,7 +15,7 @@ RSpec.describe Adaptors::Onix::V3::Reference do
   end
 
   it "returns the right number of products" do
-    expect(subject.products.count).to eq(8)
+    expect(subject.products("").count).to eq(0)
   end
 
   context "with non-unique titles" do
@@ -25,7 +25,7 @@ RSpec.describe Adaptors::Onix::V3::Reference do
     end
 
     it "returns the right number of products" do
-      expect(subject.products.count).to eq(1)
+      expect(subject.products("").count).to eq(0)
     end
   end
 end
