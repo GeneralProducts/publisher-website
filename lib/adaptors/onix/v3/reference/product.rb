@@ -29,7 +29,7 @@ module Adaptors
           end
 
           def publisher
-            at_xpath("PublishingDetail/Publisher[PublishingRole=01]/PublisherName").content
+            at_xpath("PublishingDetail/Publisher[PublishingRole=01]/PublisherName")&.content
           end
 
           def format

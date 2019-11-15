@@ -17,7 +17,7 @@ module Adaptors
     extend Forwardable
     def initialize
       # Work out where the publisher's ONIX file is expected to be
-      filename = "_data/onix.xml"
+      filename = "_data/snowbooks.xml"
 
       # Use Nokogiri to open the publisher's ONIX file
       doc = Nokogiri::XML(File.open(filename))

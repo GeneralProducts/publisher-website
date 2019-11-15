@@ -35,7 +35,7 @@ module Adaptors
           doc.xpath("ONIXMessage/Product").map do |product_node|
             product = Product.new(product_node)
             next unless File.file?("images/covers/#{product.isbn}.jpg")
-            next unless product.publisher.downcase.include? publisher.downcase
+            # next unless product.publisher.downcase.include? publisher.downcase
             # If you want to restrict the products by format, try something like the next line:
             # next unless ["Paperback","Hardback","Digital"].include? product.format
             next if titles.include? product.title
