@@ -38,11 +38,11 @@ Using your API key and shop ID from Consonance, run:
 
 ### From ONIX files:
 
-A valid ONIX 3.0 file should be present in the data directory, named for the publisher. It should include a xmlns namespace:
+A valid ONIX 3.0 file should be present in the data directory, named `onix.xml`. It should include a xmlns namespace:
 
 `http://ns.editeur.org/onix/3.0/reference`
 
-To process an ONIX 3 file called `snowbooks.xml`, run:
+The adaptor code uses a fuzzy match to process files by publisher name. To process the records for a publisher called `snowbooks`, run:
 
 `ruby lib/seed.rb --adaptor onix --publisher snowbooks`
 
