@@ -10,12 +10,12 @@ RSpec.describe Adaptors::Onix::V3::Reference do
   end
 
   let(:doc) do
-    doc = Nokogiri::XML(File.open("fixtures/snowbooks.xml"))
+    doc = Nokogiri::XML(File.open("fixtures/snowbooks-pub.xml"))
     doc.remove_namespaces!
   end
 
-  it "returns the right number of products" do
-    expect(subject.products("").count).to eq(0)
+  it "returns the products with an image" do
+    expect(subject.products("").count).to eq(4)
   end
 
   context "with non-unique titles" do
@@ -24,8 +24,27 @@ RSpec.describe Adaptors::Onix::V3::Reference do
       doc.remove_namespaces!
     end
 
-    it "returns the right number of products" do
-      expect(subject.products("").count).to eq(0)
+    it "returns the unique products with an image" do
+      expect(subject.products("").count).to eq(4)
+    end
+  end
+
+  context "with a publisher name" do
+    let(:doc) do
+      doc = Nokogiri::XML(File.open("fixtures/snowbooks-pub.xml"))
+      doc.remove_namespaces!
+    end
+
+    it "returns the unique products with an image for the publisher" do
+      expect(subject.products("Fauxbooks").count).to eq(1)
+    end
+
+    it "does a case insensitive filter" do
+      expect(subject.products("fauxbooks").count).to eq(1)
+    end
+
+    it "does a partial string filter" do
+      expect(subject.products("faux").count).to eq(1)
     end
   end
 end

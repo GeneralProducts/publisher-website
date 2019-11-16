@@ -18,6 +18,6 @@ RSpec.describe Adaptors::Onix do
   end
 
   it "passes a call to products on correctly to Reference" do
-    expect(subject.products("").count).to eq(1955)
+    expect(subject.products("").count).to eq(1747)
   end
 end

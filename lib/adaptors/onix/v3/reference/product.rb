@@ -107,10 +107,13 @@ module Adaptors
 
           def pub_date
             date_string = publishing_detail.at_xpath("PublishingDate/Date")&.content
-
             return unless date_string
 
-            Date.parse(date_string).strftime("%b %d, %Y") if date_string.is_a? Date
+            begin
+              Date.parse(date_string).strftime("%b %d, %Y")
+            rescue # rubocop:disable Style/RescueStandardError
+              puts "ONIX for product with ISBN #{isbn} contains invalid pub date: #{date_string}"
+            end
           end
 
           def pub_date_iso

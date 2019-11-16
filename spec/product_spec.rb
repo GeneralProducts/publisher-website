@@ -107,7 +107,7 @@ RSpec.describe Adaptors::Onix::V3::Reference::Product do
   end
 
   it "returns the pub date" do
-    expect(subject.pub_date).to eq(nil)
+    expect(subject.pub_date).to eq("Jan 02, 2017")
   end
 
   it "returns the pub_date in iso format" do
