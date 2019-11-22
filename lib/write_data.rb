@@ -50,7 +50,7 @@ class WriteData
         "waterstones_url" => "https://www.waterstones.com/index/search/?term=#{isbn13(product)}",
         "foyles_url" => "http://www.foyles.co.uk/all?term=#{isbn13(product)}",
         "book_depository_url" => "http://www.bookdepository.com/book/#{isbn13(product)}",
-        "wh_smith_url" => "http://www.whsmith.co.uk/search/go?af=&w=#{isbn13(product)}",
+        "wh_smith_url" => "https://www.whsmith.co.uk/search?q=#{isbn13(product)}&cgid=BKS00000",
         "blackwells_url" => "http://bookshop.blackwell.co.uk/jsp/welcome.jsp?action=search&type=isbn&term=#{isbn13(product)}",
         "oxfam_url" => "http://www.oxfam.org.uk/search-results?q=#{isbn13(product)};show_all=ogb_mixed",
         "subtitle" => sanitise(product.subtitle),
